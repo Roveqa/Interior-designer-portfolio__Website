@@ -1,0 +1,74 @@
+$color-grey: #DADADA
+  
+*, ::after, ::before
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+  outline: none
+
+html
+  font-size: 10px
+  scroll-behavior: smooth
+  scroll-padding-top: 8rem
+
+body
+  font-family: "Inter-light"
+  font-weight: 300
+  color: black
+  font-size: 2.2rem
+  background: white
+  &::-webkit-scrollbar 
+    width: 1rem
+    background-color: white
+  &::-webkit-scrollbar-thumb 
+    background-color: $color-grey
+    border-radius: 1rem
+
+p
+  &::selection
+    background: $color-grey
+    color: black
+
+h1, h2, h3
+  &::selection
+    background: $color-grey
+    color: black
+
+input
+  &::selection
+    background: $color-grey
+    color: black
+
+img
+  &::selection
+    background: $color-grey
+
+a
+  &::selection
+    background: $color-grey
+    color: black
+
+textarea
+  &::selection
+    background: $color-grey
+    color: black
+
+button
+  &::selection
+    background: $color-grey
+    color: black
+
+span
+  &::selection
+    background: $color-grey
+    color: black
+
+div
+  &::selection
+    background: $color-grey
+    color: black
+
+ul, li
+  &::selection
+    background: $color-grey
+    color: black

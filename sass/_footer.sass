@@ -1,0 +1,78 @@
+.footer
+    width: 95%
+    margin: 0 auto
+    &__title
+        display: flex
+        justify-content: center
+        margin-bottom: 14rem
+        @include respond(tab-land)
+            margin-bottom: 8rem
+        @include respond(phone)
+            margin-bottom: 6.5rem
+    &__list
+        display: flex
+        justify-content: space-between
+        margin-bottom: 14rem
+        list-style-type: none
+        @include respond(tab-land)
+            margin-bottom: 8rem
+        @include respond(phone)
+            flex-direction: column
+            align-items: center
+            margin-bottom: 6.5rem
+        
+    &__item
+        display: flex
+        @include respond(phone)
+            &:not(:last-child)
+                margin-bottom: 3.5rem
+    &__link
+        position: relative
+        font-family: "Inter-light"
+        font-weight: 300
+        text-decoration: none
+        color: black
+        font-size: 2rem
+        @include respond(tab-land)
+            font-size: 1.8rem
+        &::before
+            content: ''
+            position: absolute
+            width: 100%
+            height: .1rem
+            border-radius: .4rem
+            background-color: black
+            bottom: .2rem
+            left: 0
+            transform-origin: right
+            transform: scaleX(0)
+            transition: transform .3s ease-in-out
+        &:hover::before
+            transform-origin: left
+            transform: scaleX(1)  
+    &__arrow
+        margin-left: .5rem
+        position: relative
+        width: 1.1rem
+        height: 1.1rem
+        @include respond(tab-land)
+            transform: translateY(-.2rem)
+    &__arrow span
+        display: block
+        position: absolute
+        width: 1.1rem
+        height: .1rem
+        background: black
+        &:nth-child(1)
+            transform: translateY(1.8rem)
+        &:nth-child(2)
+            transform: rotate(90deg) translate(1.2rem, -.5rem)
+        &:nth-child(3)
+            width: 1.33rem
+            transform: rotate(45deg) translate(.8rem, .99rem)
+
+
+
+// p 
+//     font-size: clamp(2rem, 5vw, 8rem)
+//     margin-bottom: 30rem

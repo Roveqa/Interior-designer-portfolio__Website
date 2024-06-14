@@ -1,0 +1,137 @@
+@font-face 
+  font-family: "Inter-light"
+  src: url("../fonts/Inter-Light.ttf")
+  font-weight: 300
+  font-display: swap
+  font-style: normal
+  font-size: 2.2rem
+  line-height: normal
+
+@font-face 
+  font-family: "Inter-regular"
+  src: url("../fonts/Inter-Regular.ttf")
+  font-weight: 400
+  font-display: swap
+  font-style: normal
+  font-size: 2.2rem
+  line-height: normal
+
+@font-face 
+  font-family: "NeutralFace"
+  src: url("../fonts/NeutralFace.otf")
+  font-weight: 400
+  font-display: swap
+  font-style: normal
+  font-size: 2.2rem
+  line-height: normal
+
+.main-title
+  font-family: "NeutralFace"
+  font-weight: 400
+  font-size: 10.53vw
+  margin-top: 2rem
+  display: flex
+  @include respond(phone)
+    font-size: 17vw
+
+.word-wrapper
+  display: block
+
+.word-wrapper-2
+  display: block
+
+.word
+  animation: slideDownWord .8s forwards
+  display: inline-block
+  transform: translateY(-100%)
+
+.word-2
+    animation: slideDownWord2 .8s forwards
+    display: inline-block
+    transform: translateY(-100%)
+
+h1 .word-wrapper:nth-of-type(1) .word-1
+  animation-delay: .1s
+
+h1 .word-wrapper:nth-of-type(2) .word-2
+  animation-delay: .2s
+
+h1 .word-wrapper:nth-of-type(3) .word-3
+  animation-delay: .3s
+
+h1 .word-wrapper:nth-of-type(4) .word-4
+  animation-delay: .4s
+
+h1 .word-wrapper:nth-of-type(5) .word-5
+  animation-delay: .5s
+
+h1 .word-wrapper:nth-of-type(6) .word-6
+  animation-delay: .6s
+
+h1 .word-wrapper:nth-of-type(7) .word-7
+  animation-delay: .7s
+
+
+h1 .word-wrapper-2:nth-of-type(1) .word-9
+  animation-delay: .6s
+  @include respond(phone)
+    animation-delay: .1s
+
+h1 .word-wrapper-2:nth-of-type(2) .word-10
+  animation-delay: .5s
+  @include respond(phone)
+    animation-delay: .2s
+
+h1 .word-wrapper-2:nth-of-type(3) .word-11
+  animation-delay: .4s
+  @include respond(phone)
+    animation-delay: .3s
+
+h1 .word-wrapper-2:nth-of-type(4) .word-12
+  animation-delay: .3s
+  @include respond(phone)
+    animation-delay: .4s
+
+h1 .word-wrapper-2:nth-of-type(5) .word-13
+  animation-delay: .2s
+  @include respond(phone)
+    animation-delay: .5s
+
+h1 .word-wrapper-2:nth-of-type(6) .word-14
+  animation-delay: .1s
+  @include respond(phone)
+    animation-delay: .6s
+
+@keyframes slideDownWord
+  0% 
+    transform: translateY(-100%)
+    opacity: 0
+  
+  100% 
+    transform: translateY(0%)
+    opacity: 1
+
+@keyframes slideDownWord2
+  0% 
+    transform: translateY(-100%)
+    opacity: 0
+  
+  100% 
+    transform: translateY(0%)
+    opacity: 1
+
+.text
+  font-family: "Inter-light"
+  font-size: 2rem
+  @include respond(tab-land)
+    font-size: 1.6rem
+  @include respond(phone)
+    font-size: 1.8rem
+
+.title
+  font-family: "NeutralFace"
+  font-weight: 400
+  font-size: 3vw
+  text-transform: uppercase
+  @include respond(phone)
+    font-size: 2.2rem

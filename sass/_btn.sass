@@ -1,0 +1,44 @@
+.btn
+    position: relative
+    padding: 1.5rem 15rem
+    background: black
+    color: white
+    border-radius: 10rem
+    font-size: 2.2rem
+    text-decoration: none
+    transition: .3s all
+    animation: slideUpBtn 1.9s forwards
+    overflow: hidden
+    white-space: nowrap
+    @include respond(tab-land)
+      font-size: 1.8rem
+    @include respond(tab-port)
+      animation: slideUpBtnMobile 1.9s forwards
+    @include respond(phone)
+      position: absolute
+      bottom: 6rem
+      padding: 1.5rem 28%
+    &:hover
+        background: none
+        border: .1rem solid black
+        color: black
+    &:active
+        transform: translateY(0)
+        background: rgba(0, 0, 0, 0.8)
+
+
+@keyframes slideUpBtn
+  0% 
+    transform: translate(-4rem, 100%)
+    opacity: 0
+  100% 
+    transform: translateY(0%)
+    opacity: 1
+
+@keyframes slideUpBtnMobile
+  0% 
+    transform: translateY( 100%)
+    opacity: 0
+  100% 
+    transform: translateY(0%)
+    opacity: 1

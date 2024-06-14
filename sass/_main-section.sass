@@ -1,0 +1,98 @@
+.main-section
+    width: 95%
+    margin: 0 auto
+    height: 100vh
+    margin-bottom: 21rem
+    @include respond(tab-land)
+      margin-bottom: 10rem
+    @include respond(phone)
+      position: relative
+      width: 100%
+    &__main-title
+        margin-bottom: 9%
+        transform: translateX(-1rem)
+        @include respond(phone)
+          position: absolute
+          margin-bottom: 2%
+          height: 100%
+          z-index: 1
+          color: white
+          transform: translateX(9%)
+    &__img
+        width: 100%
+        height: 40%
+        object-fit: cover
+        animation: show 2s forwards
+        margin-bottom: 3rem
+        border-radius: 2rem
+        @include respond(phone)
+          position: absolute
+          border-radius: 0
+          z-index: 0
+          height: 100%
+          animation: none
+
+.word-wrapper-m
+  display: flex
+  @include respond(phone)
+    flex-direction: column
+  &__1
+    display: flex
+  &__2
+    display: flex
+
+.main-wapper
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+    @include respond(tab-port)
+      flex-direction: column
+      align-items: center
+      @include respond(phone)
+        width: 95%
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+        z-index: 1
+        bottom: 0
+    &__text
+        width: 60%
+        animation: slideUpText 1.9s forwards
+        @include respond(tab-land)
+          font-size: 1.6rem
+          width: 50%
+        @include respond(tab-port)
+          width: 90%
+          text-align: center
+          margin-bottom: 2rem
+          animation: slideUpTextMobile 1.9s forwards
+        @include respond(phone)
+          position: absolute
+          color: white
+          text-align: left
+          bottom: 12rem
+
+@keyframes show
+  0% 
+    scale: .6
+    opacity: 0
+  100% 
+    scale: 1
+    opacity: 1
+
+@keyframes slideUpText
+  0% 
+    transform: translate(4rem, 100%)
+    opacity: 0
+  100% 
+    transform: translateY(0%)
+    opacity: 1
+
+@keyframes slideUpTextMobile
+  0% 
+    transform: translateY( 100%)
+    opacity: 0
+  100% 
+    transform: translateY(0%)
+    opacity: 1

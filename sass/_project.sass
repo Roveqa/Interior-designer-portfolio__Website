@@ -1,0 +1,114 @@
+.project
+    position: relative
+    height: 50rem
+    overflow: hidden
+    margin-bottom: 25rem
+    @include respond(tab-land)
+        height: 38rem
+        margin-bottom: 10rem
+    &__container
+        height: 50rem
+        padding: 0 2.5%
+        display: flex
+        overflow-x: auto
+        scroll-behavior: smooth
+        @include respond(tab-land)
+            height: 38rem
+        &::-webkit-scrollbar
+            display: none
+
+    &__card    
+        flex: 0 0 auto
+        &-1
+            width: 29rem
+            height: 47.5rem 
+            @include respond(tab-land)
+                width: 21rem
+                height: 34.5rem 
+        &-2
+            width: 47rem
+            height: 35.8rem 
+            margin-left: 2rem
+            @include respond(tab-land)
+                width: 34rem
+                height: 26rem 
+        &-3
+            width: 59rem
+            height: 34rem 
+            margin-left: 2rem
+            @include respond(tab-land)
+                width: 36rem
+                height: 21.5rem 
+        &-4
+            width: 28.7rem
+            height: 42.7rem 
+            margin-left: 2rem
+            @include respond(tab-land)
+                width: 19rem
+                height: 29.2rem 
+        &-5
+            width: 62rem
+            height: 38.8rem 
+            margin-left: 2rem
+            @include respond(tab-land)
+                width: 36.5rem
+                height: 23.7rem 
+    
+    &__name
+        font-family: "NeutralFace"
+        font-weight: 400
+        font-size: 1.4rem
+        display: flex
+        justify-content: center
+        margin-bottom: 1rem
+        @include respond(tab-land)
+            font-size: 1.2rem
+
+    &__img
+        width: 100%
+        object-fit: cover
+        overflow: hidden
+
+    &__number
+        margin-top: -.5rem
+        font-size: 1.6rem
+        @include respond(tab-land)
+            font-size: 1.4rem
+
+.pre-btn
+    position: absolute
+    width: 1.5rem
+    height: 6.2rem
+    background: none
+    border: none
+    cursor: pointer
+    top: 20rem
+    left: 2rem
+    @include respond(tab-land)
+        top: 15rem
+        left: .5rem
+
+.pre-btn img
+    @include respond(tab-land)
+        width: 1rem
+        height: 4.1rem
+
+
+.nxt-btn
+    position: absolute
+    transform: rotate(180deg)
+    width: 1.5rem
+    height: 6.2rem
+    background: none
+    border: none
+    cursor: pointer
+    top: 20rem
+    right: 2rem
+    @include respond(tab-land)
+        top: 15rem
+        right: .5rem
+
+.nxt-btn img
+    @include respond(tab-land)
+        width: 1rem
+        height: 4.1rem

@@ -1,0 +1,128 @@
+.services
+    width: 95%
+    margin: 0 auto
+    margin-bottom: 30rem
+    @include respond(tab-land)
+        margin-bottom: 20rem
+    @include respond(tab-port)
+        margin-bottom: 12rem
+    &__title
+        &-1
+            @include respond(phone)
+                width: 28rem
+        &-2
+            margin-left: 15%
+            margin-bottom: 12rem
+            @include respond(tab-port)
+                margin-bottom: 8rem
+            @include respond(phone)
+                margin-left: 15%
+                width: 24rem
+
+.accordion
+    width: 100%
+
+.accordion .contentBx
+    position: relative
+
+.accordion .contentBx .label
+    display: flex
+    position: relative
+    padding: 2.6rem 0 2.6rem 3.5rem
+    background: none
+    border-top: .1rem solid black
+    color: black
+    cursor: pointer
+    font-family: "NeutralFace"
+    font-weight: 400
+    font-size: 2.4rem
+    @include respond(tab-land)
+        font-size: 2rem
+        padding: 1.4rem 0 1.4rem 1.5rem
+    @include respond(phone)
+        font-size: 1.8rem
+    &::before
+        content: url(../icons/arrow-u.svg)
+        position: absolute
+        top: 50%
+        right: 2rem
+        transform: translateY(-50%)
+        @include respond(tab-land)
+            content: url(../icons/arrow-u-m.svg)
+        @include respond(phone)
+            top: 1.4rem
+            transform: translateY(0)
+
+.accordion .contentBx.active .label::before
+    content: url(../icons/arrow-d.svg)
+    @include respond(tab-land)
+        content: url(../icons/arrow-d-m.svg)
+
+.label-title
+    margin-left: 30%
+    @include respond(tab-land)
+        margin-left: 20%
+    @include respond(tab-port)
+        width: 55%
+    @include respond(phone)
+        margin-left: 10%
+    &__span
+        font-size: 2rem
+        @include respond(tab-land)
+            font-size: 1.6rem
+        @include respond(phone)
+            font-size: 1.4rem
+
+.accordion .contentBx .content
+    position: relative
+    height: 0
+    overflow: hidden
+    transition: .5s
+    &-5
+        border-bottom: .1rem solid black
+    &__list
+        list-style-type: disc
+        margin-left: 35%
+        @include respond(phone)
+            margin-left: 30%
+    &__item
+        width: 30rem
+        @include respond(tab-land)
+            font-size: 1.8rem
+        @include respond(phone)
+            width: 20rem
+        &-3
+            width: 28rem
+            @include respond(phone)
+                width: 23rem
+        &:not(:last-child)
+            margin-bottom: 1.5rem
+
+.accordion .contentBx.active .content
+    height: 23rem
+    @include respond(tab-land)
+        height: 18rem
+    &-2
+        height: 30rem
+        @include respond(tab-land)
+            height: 24rem
+        @include respond(phone)
+            height: 25rem
+    &-3
+        height: 36rem
+        @include respond(tab-land)
+            height: 30rem
+        @include respond(phone)
+            height: 34rem
+    &-4
+        height: 46rem
+        @include respond(tab-land)
+            height: 36rem
+        @include respond(phone)
+            height: 44rem
+    &-5
+        height: 44rem
+        @include respond(tab-land)
+            height: 32rem
+        @include respond(phone)
+            height: 46rem

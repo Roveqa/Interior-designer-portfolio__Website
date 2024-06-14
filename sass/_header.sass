@@ -1,0 +1,120 @@
+.header
+    position: fixed
+    z-index: 10
+    width: 100%
+    animation: slideDownHeader 2s forwards
+    &__btn
+        position: relative
+        z-index: 15
+        width: 3rem
+        height: 1.6rem
+        border: none
+        outline: none
+        background: none
+        display: none
+        @include respond(phone)
+            display: block
+            margin: 3.2rem 2rem 0 0 
+            right: 0
+    &__btn span
+        display: block
+        position: absolute
+        width: 3rem
+        height: .1rem
+        background: black
+        transition: all .3s
+        &:nth-child(1)
+            transform: translateY(-.8rem)
+        &:nth-child(3)
+            transform: translateY(.8rem)
+    @include respond(phone)
+        display: flex
+        justify-content: flex-end
+        width: 100%
+        left: auto
+        transform: translateX(0)
+        z-index: 8
+
+.header.open .header__btn span
+    display: block
+    position: absolute
+    width: 3rem
+    height: .1rem
+    background: white
+    &:nth-child(1)
+        transform: translateY(0) rotate(29deg)
+        background: white
+    &:nth-child(2)
+        opacity: 0
+    &:nth-child(3)
+        transform: translateY(0) rotate(-29deg)
+        background: white
+
+.header.open .nav-menu
+    @include respond(phone)
+        transform: translateX(-100%)
+        visibility: visible
+        z-index: 7
+.nav-menu
+    width: 95%
+    margin: 0 auto
+    z-index: 9
+    @include respond(phone)
+        position: absolute
+        width: 70%
+        height: 100vh
+        right: -70%
+        padding: 9rem 5% 0 0 
+        background: black
+        visibility: hidden
+        transition: all .3s
+        z-index: 4
+        will-change: transition
+    &__list
+        display: flex
+        justify-content: space-between
+        list-style-type: none
+        @include respond(phone)
+            flex-direction: column
+            align-items: flex-end
+            margin-top: 4rem
+    &__item
+        @include respond(phone)
+            margin: 0
+            &:not(:last-child)
+                margin-bottom: 5rem
+    &__link
+        position: relative
+        font-family: "Inter-light"
+        font-weight: 300
+        text-decoration: none
+        color: black
+        @include respond(tab-land)
+            font-size: 1.8rem
+        @include respond(phone)
+            font-size: 2.6rem
+            color: white
+        &::before
+            content: ''
+            position: absolute
+            width: 100%
+            height: .1rem
+            border-radius: .4rem
+            background-color: black
+            bottom: .2rem
+            left: 0
+            transform-origin: right
+            transform: scaleX(0)
+            transition: transform .3s ease-in-out
+        &:hover::before
+            transform-origin: left
+            transform: scaleX(1)  
+
+@keyframes slideDownHeader
+  0% 
+    transform: translateY(-250%)
+    opacity: 0
+  
+  100% 
+    transform: translateY(0%)
+    opacity: 1

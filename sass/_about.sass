@@ -1,0 +1,73 @@
+.about
+    width: 95%
+    margin: 0 auto
+    &__title
+        &-1
+            margin-left: 15%
+            @include respond(phone)
+                margin-left: 0
+                width: 30rem
+        &-2
+            @include respond(phone)
+                margin-left: 12%
+                width: 30rem
+        &-3
+            margin-left: 34%
+            margin-bottom: 20rem
+            @include respond(tab-land)
+                margin-bottom: 9rem
+            @include respond(phone)
+                margin-left: 0
+                width: 26rem
+
+.about-wrapper
+    position: relative
+    margin-left: 35.5%
+    display: flex
+    margin-bottom: 30rem
+    @include respond(tab-land)
+        margin-left: 20%
+    @include respond(tab-port)
+        margin-left: 10%
+    @include respond(phone)
+        margin-left: 5%
+        flex-direction: column
+        margin-bottom: 20rem
+    &__img
+        @include respond(tab-land)
+            width: 20rem
+        @include respond(phone)
+            width: 16rem
+            height: 22rem
+    &__text
+        margin-left: 2%
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        &-1
+            @include respond(phone)
+                margin-top: 5rem
+        &-2
+            width: 70%
+            transform: translateY(50%)
+            @include respond(phone)
+                width: 90%
+                transform: translateY(15%)
+    &__name
+        position: absolute
+        font-family: "NeutralFace"
+        font-weight: 400
+        font-size: 4rem
+        mix-blend-mode: difference
+        color: white
+        text-transform: uppercase
+        width: 20rem
+        top: 35rem
+        left: 1rem
+        @include respond(tab-land)
+            font-size: 2.2rem
+            width: 11rem
+            top: 25rem
+        @include respond(phone)
+            font-size: 2rem
+            top: 20.6rem
